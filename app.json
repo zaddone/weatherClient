@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/start/index",
+    "pages/index/index",
+    "pages/map/map"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundTextStyle": "dark"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "米果推荐请求获取您的位置信息"
+    }
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "sitemapLocation": "sitemap.json"
+}

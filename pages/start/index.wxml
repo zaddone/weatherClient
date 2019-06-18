@@ -1,0 +1,32 @@
+<view style="height:{{windowsHeight}}px;visibility:{{show}}">
+  <view class="scroll-view_H" style="padding-top:{{statusBarHeight}}px;">
+    <view class="title">
+      <view hover-stop-propagation>
+        <navigator url="../start/index" class="titletag">◎</navigator>
+        <view class="titletag">{{msg.base.cityname}} {{msg.base.weather}}</view>
+        <view class="titletag u" bindtap="openMap">[换地点] </view>
+      </view>
+      <view class="titletag png40 {{msg.base.weathercode}}"></view>
+      <view class="titletag" style="padding-right:0;font-size: 100rpx;">{{msg.base.temp}}</view>
+      <view class="titletag u" style="padding-left:0">℃ </view>
+      <view class="titletag u">{{msg.base.time}} </view>
+    </view>
+    <scroll-view style="width:{{windowsWidth}}px" scroll-x>
+      <view class="scroll-view-item_H" style="" wx:for="{{msg.future}}" wx:key="fi">
+        <view>{{item.fj}}</view>
+        <view class="png40 d{{item.fa}}"></view>
+        <view class="png40 n{{item.fb}}"></view>
+        <view>{{item.fc}}/{{item.fd}}℃</view>
+
+        <view> {{item.fe}} </view>
+      </view>
+    </scroll-view>
+  </view>
+  <scroll-view scroll-y  class="pagelist"  style="visibility:{{listshow}};height:{{pagelistheight}}px;">
+  <view style="height:80rpx"></view>
+    <navigator url="../index/index?id={{item._id}}" wx:for="{{pages}}" wx:key="_id" bindtap="">{{item.title}}
+    </navigator>
+  </scroll-view>
+  <view class="scrollviewTop" style="top:{{scrollviewTop}}px"></view>
+  <view class="scrollviewbottom"></view>
+</view>
